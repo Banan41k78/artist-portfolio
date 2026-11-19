@@ -1,3 +1,6 @@
+/* =========================================
+   БАЗОВЫЕ СБРОСЫ И НАСТРОЙКИ
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -5,14 +8,33 @@
     font-family: Arial, sans-serif;
 }
 
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Защита от горизонтальной прокрутки */
+}
+
 body {
     background-color: #fafafa;
     color: #2c2c2c;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Прижимает подвал к низу */
 }
 
-/* Шапка */
+/* Общие стили для картинок, чтобы не вылезали */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================
+   ШАПКА САЙТА
+   ========================================= */
 header {
+    width: 100%;
     background-color: #1a1a1a;
     color: #fff;
     padding: 1rem 2rem;
@@ -60,34 +82,20 @@ nav a.active {
     border-bottom-color: #c9a961;
 }
 
-/* Хлебные крошки */
-.breadcrumbs {
-    font-size: 0.85rem;
-    color: #888;
-    margin-bottom: 1rem;
-}
-
-.breadcrumbs a {
-    color: #c9a961;
-    text-decoration: none;
-}
-
-.breadcrumbs a:hover {
-    text-decoration: underline;
-}
-
-.breadcrumbs span {
-    color: #555;
-}
-
-/* Контейнер — на всю ширину экрана */
+/* =========================================
+   КОНТЕЙНЕР (НА ВСЮ ШИРИНУ)
+   ========================================= */
 .container {
     width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 2.5rem clamp(1rem, 4vw, 4rem);
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2.5rem clamp(1rem, 4vw, 4rem); /* Отступы зависят от ширины экрана */
+    flex: 1;
 }
 
+/* =========================================
+   ТИПОГРАФИКА
+   ========================================= */
 h1 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
@@ -118,12 +126,35 @@ p {
     color: #555;
 }
 
-/* Баннер */
+/* Хлебные крошки */
+.breadcrumbs {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 1rem;
+}
+
+.breadcrumbs a {
+    color: #c9a961;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs span {
+    color: #555;
+}
+
+/* =========================================
+   БАННЕР (HERO)
+   ========================================= */
 .hero {
     background: linear-gradient(135deg, #1a1a1a 0%, #3a3a3a 100%);
     color: #fff;
     padding: 5rem 1.5rem;
     text-align: center;
+    width: 100%;
 }
 
 .hero h1 {
@@ -139,7 +170,9 @@ p {
     margin: 0 auto 2rem;
 }
 
-/* Кнопки — заметные, с рамкой и заливкой */
+/* =========================================
+   КНОПКИ И ЭЛЕМЕНТЫ УПРАВЛЕНИЯ
+   ========================================= */
 .btn {
     display: inline-block;
     padding: 0.8rem 1.8rem;
@@ -172,7 +205,7 @@ p {
     color: #1a1a1a;
 }
 
-/* На тёмном баннере контурная кнопка должна быть белой */
+/* Контурная кнопка на темном фоне */
 .hero .btn-outline {
     background: transparent;
     color: #fff;
@@ -184,7 +217,9 @@ p {
     color: #1a1a1a;
 }
 
-/* Сетка */
+/* =========================================
+   СЕТКА И КАРТОЧКИ
+   ========================================= */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -231,7 +266,7 @@ p {
     margin: 0;
 }
 
-/* Фильтры */
+/* Фильтры в галерее */
 .filters {
     display: flex;
     gap: 0.6rem;
@@ -258,7 +293,9 @@ p {
     border-color: #1a1a1a;
 }
 
-/* Модальное окно */
+/* =========================================
+   МОДАЛЬНОЕ ОКНО (ГАЛЕРЕЯ)
+   ========================================= */
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -343,7 +380,9 @@ p {
     color: #c9a961;
 }
 
-/* Формы */
+/* =========================================
+   ФОРМЫ (КОНТАКТЫ)
+   ========================================= */
 .form-group {
     margin-bottom: 1.2rem;
 }
@@ -384,7 +423,9 @@ p {
     margin: 0;
 }
 
-/* Список */
+/* =========================================
+   СПИСКИ И ШАГИ
+   ========================================= */
 ul.list {
     list-style: none;
     padding: 0;
@@ -400,7 +441,6 @@ ul.list li strong {
     color: #1a1a1a;
 }
 
-/* Шаги */
 ol.steps {
     counter-reset: step;
     list-style: none;
@@ -436,7 +476,9 @@ ol.steps li strong {
     color: #1a1a1a;
 }
 
-/* FAQ */
+/* =========================================
+   FAQ
+   ========================================= */
 .faq-item {
     border-bottom: 1px solid #eee;
     padding: 0.8rem 0;
@@ -471,7 +513,9 @@ ol.steps li strong {
     margin-bottom: 0;
 }
 
-/* Отзывы */
+/* =========================================
+   ОТЗЫВЫ И АВТОР
+   ========================================= */
 .reviews-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -496,7 +540,6 @@ ol.steps li strong {
     font-style: italic;
 }
 
-/* Автор */
 .author-block {
     display: flex;
     gap: 1.5rem;
@@ -528,7 +571,9 @@ ol.steps li strong {
     margin-bottom: 0;
 }
 
-/* Пример фото → картина */
+/* =========================================
+   ПРИМЕР ФОТО -> КАРТИНА
+   ========================================= */
 .photo-example {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -557,7 +602,9 @@ ol.steps li strong {
     text-align: center;
 }
 
-/* Реквизиты */
+/* =========================================
+   РЕКВИЗИТЫ
+   ========================================= */
 .requisites {
     background: #fff;
     border-left: 4px solid #c9a961;
@@ -576,7 +623,9 @@ ol.steps li strong {
     margin-bottom: 0.4rem;
 }
 
-/* 404 */
+/* =========================================
+   404 СТРАНИЦА
+   ========================================= */
 .error-page {
     text-align: center;
     padding: 4rem 1.5rem;
@@ -603,13 +652,16 @@ ol.steps li strong {
     margin-right: auto;
 }
 
-/* Подвал */
+/* =========================================
+   ПОДВАЛ
+   ========================================= */
 footer {
+    width: 100%;
     background: #1a1a1a;
     color: #999;
     text-align: center;
     padding: 2rem 1rem;
-    margin-top: 3rem;
+    margin-top: auto;
     font-size: 0.9rem;
 }
 
@@ -628,7 +680,9 @@ footer .requisites-mini {
     color: #777;
 }
 
-/* Карточки услуг — коротко и наглядно */
+/* =========================================
+   КАРТОЧКИ УСЛУГ (ИЗ ЛАБЫ 2)
+   ========================================= */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -681,9 +735,8 @@ footer .requisites-mini {
 }
 
 /* =========================================
-   БУРГЕР-МЕНЮ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ
+   БУРГЕР-МЕНЮ И АДАПТИВНОСТЬ
    ========================================= */
-
 .burger-menu {
     display: none; /* Скрыто на ПК */
     background: none;
@@ -703,7 +756,6 @@ footer .requisites-mini {
     transition: all 0.3s ease;
 }
 
-/* Анимация крестика */
 .burger-menu.active span:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
 }
@@ -716,10 +768,9 @@ footer .requisites-mini {
 
 @media (max-width: 768px) {
     .burger-menu {
-        display: flex; /* Показываем бургер */
+        display: flex;
     }
 
-    /* Скрываем обычное меню и делаем выпадающим */
     nav ul {
         display: none;
         flex-direction: column;
@@ -735,7 +786,7 @@ footer .requisites-mini {
     }
 
     nav ul.active {
-        display: flex; /* Показываем по клику */
+        display: flex;
     }
 
     nav ul li {
@@ -746,21 +797,25 @@ footer .requisites-mini {
         font-size: 1.1rem;
     }
 
-    /* Адаптив для остальных блоков */
     .modal {
         grid-template-columns: 1fr;
     }
+    
     .hero h1 { font-size: 1.8rem; }
     header { padding: 1rem; }
+    
     .photo-example {
         grid-template-columns: 1fr;
     }
+    
     .photo-example-arrow {
         transform: rotate(90deg);
     }
+    
     .author-block {
         flex-direction: column;
         text-align: center;
     }
+    
     .error-page h1 { font-size: 4rem; }
 }
