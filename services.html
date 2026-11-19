@@ -4,26 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Услуги — картина на заказ, портрет по фото</title>
-<meta name="description" content="Заказать картину, портрет по фото, живопись на заказ. Сроки от 10 дней, цены от 6000 руб. Работа по предоплате 50%.">
+<meta name="description" content="Заказать картину, портрет по фото, живопись на заказ. Сроки от 10 дней, цены от 6000 руб. Работа по предоплате 50%. FAQ, гарантии, доставка по России.">
 <meta name="keywords" content="картина на заказ, портрет по фото, заказать картину, художник на заказ">
-<link rel="canonical" href="https://artist-portfolio.netlify.app/services.html">
+<link rel="canonical" href="https://banan41k78.github.io/artist-portfolio/services.html">
 <meta property="og:title" content="Услуги — заказать картину или портрет">
 <meta property="og:description" content="Картина на заказ, портрет по фото, картина по фото. Цены и сроки.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://artist-portfolio.netlify.app/services.html">
+<meta property="og:url" content="https://banan41k78.github.io/artist-portfolio/services.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
-<link rel="canonical" href="https://banan41k78.github.io/artist-portfolio/services.html">
 </head>
 <body>
 
 <header>
-    <div class="logo">ХУДОЖНИК</div>
+    <a href="about.html" class="logo">ХУДОЖНИК</a>
+    <button class="burger-menu" id="burgerBtn" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     <nav>
-        <ul>
+        <ul id="navMenu">
             <li><a href="index.html">Главная</a></li>
             <li><a href="gallery.html">Галерея</a></li>
             <li><a href="services.html" class="active">Услуги</a></li>
+            <li><a href="delivery.html">Доставка</a></li>
             <li><a href="about.html">О художнике</a></li>
             <li><a href="contacts.html">Контакты</a></li>
         </ul>
@@ -37,6 +42,15 @@
 
     <h1>Услуги</h1>
     <p>Работаю по предоплате 50%. Сроки и стоимость обсуждаются индивидуально.</p>
+
+    <h2>Как заказать картину</h2>
+    <ol class="steps">
+        <li><strong>Заявка.</strong> Оставьте заявку через форму на странице «Контакты» или напишите на почту.</li>
+        <li><strong>Согласование.</strong> Обсуждаем идею, размер, технику, сроки и стоимость.</li>
+        <li><strong>Эскиз и предоплата 50%.</strong> Утверждаем эскиз, вносится предоплата 50%.</li>
+        <li><strong>Работа над картиной.</strong> Пишу картину, присылаю промежуточные фото.</li>
+        <li><strong>Передача и оплата.</strong> Финальная оплата, отправка или самовывоз.</li>
+    </ol>
 
     <h2>Картина на заказ</h2>
     <p>Напишу картину по вашему описанию: пейзаж, сюжет, портрет. Обсуждаем идею, композицию, размер, сроки.</p>
@@ -65,15 +79,80 @@
         <li><strong>Цена:</strong> от 10 000 руб.</li>
     </ul>
 
+    <h2>Как фото превращается в картину</h2>
+    <p>Пример работы по фотографии: слева — исходное фото, справа — готовая картина.</p>
+    <div class="photo-example">
+        <div class="photo-example-item">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><rect fill='%23cccccc' width='400' height='400'/><text x='50%25' y='50%25' font-family='Arial' font-size='20' fill='%23666' text-anchor='middle' dominant-baseline='middle'>ФОТО</text></svg>" alt="Исходное фото для заказа картины">
+            <p>Фото</p>
+        </div>
+        <div class="photo-example-arrow">→</div>
+        <div class="photo-example-item">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23c9a961'/><stop offset='1' stop-color='%238b6f3a'/></linearGradient></defs><rect fill='url(%23g)' width='400' height='400'/><text x='50%25' y='50%25' font-family='Arial' font-size='20' fill='white' text-anchor='middle' dominant-baseline='middle'>КАРТИНА</text></svg>" alt="Готовая картина по фото">
+            <p>Картина</p>
+        </div>
+    </div>
+
     <h2>Художник на заказ</h2>
     <p>Выезд на мероприятие, пленэр, мастер-класс. Уточняйте по контактам.</p>
 
-    <a href="contacts.html" class="btn" style="margin-top:1rem;">Оставить заявку</a>
+    <h2>Гарантии</h2>
+    <ul class="list">
+        <li><strong>Соответствие эскизу:</strong> правки на этапе эскиза бесплатны.</li>
+        <li><strong>Сохранность при доставке:</strong> упаковка в жёсткий короб, страховка отправления.</li>
+        <li><strong>Материалы:</strong> масляные краски, холст на подрамнике, акварель на профессиональной бумаге.</li>
+        <li><strong>Возврат:</strong> если картина не соответствует утверждённому эскизу — возврат предоплаты.</li>
+    </ul>
+
+    <h2>Доставка и оплата</h2>
+    <p><a href="delivery.html">Подробные условия доставки и оплаты →</a></p>
+    <ul class="list">
+        <li><strong>Оплата:</strong> предоплата 50% переводом или картой, остаток — после готовности работы.</li>
+        <li><strong>Доставка:</strong> СДЭК, Почта России, самовывоз в Туле.</li>
+        <li><strong>Сроки:</strong> по России 2–7 дней после отправки.</li>
+    </ul>
+
+    <h2>Часто задаваемые вопросы</h2>
+
+    <details class="faq-item">
+        <summary>Можно ли заказать картину по фотографии?</summary>
+        <p>Да. Пришлите фото, обсудим композицию и формат. По фото можно написать портрет, пейзаж или сюжетную композицию.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary>Сколько ждать заказ?</summary>
+        <p>Портрет по фото — от 10 дней. Картина на заказ — от 2 недель. Точный срок зависит от размера и сложности работы.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary>Есть ли доставка в другие города?</summary>
+        <p>Да, отправляю СДЭК и Почтой России по всей России. Упаковываю в жёсткий короб, страховка включена.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary>Как вносится предоплата?</summary>
+        <p>После согласования эскиза вносится предоплата 50%. Остаток — после готовности работы, до отправки.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary>Можно ли вернуть работу?</summary>
+        <p>Если картина не соответствует утверждённому эскизу — возвращаю предоплату. Правки на этапе эскиза бесплатны.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary>Какие материалы используются?</summary>
+        <p>Масло — холст на подрамнике, профессиональные краски. Акварель — акварельная бумага 300 г/м². Графика — карандаш на бумаге.</p>
+    </details>
+
+    <a href="contacts.html" class="btn" style="margin-top:1.5rem;">Оставить заявку</a>
 </div>
 
 <footer>
     <p>Портфолио художника, 2026. <a href="contacts.html">Связаться</a></p>
+    <p class="requisites-mini">ИП Александров А. В. • ИНН 710000000000 • Тула</p>
+    <p><a href="privacy.html">Политика конфиденциальности</a> • <a href="delivery.html">Доставка и оплата</a> • <a href="contacts.html">Контакты</a></p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

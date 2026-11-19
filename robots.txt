@@ -1,6 +1,10 @@
 User-agent: *
 Disallow: /artist-portfolio/admin/
 Disallow: /artist-portfolio/private/
-Allow: /artist-portfolio/
-Sitemap: https://banan41k78.github.io/artist-portfolio/sitemap.xml
+Allow: /artist-portfolio/private/public/
+Disallow: /*?q=
+Disallow: /*?page=
+Disallow: /*.pdf$
+Disallow: /artist-portfolio/404.html
 Clean-param: utm_source&utm_medium&utm_campaign
+Sitemap: https://banan41k78.github.io/artist-portfolio/sitemap.xml

@@ -6,24 +6,29 @@
 <title>Контакты — заказать картину или портрет</title>
 <meta name="description" content="Свяжитесь с художником: форма заявки, email, телефон, соцсети. Отвечу в течение дня. Заказать картину или портрет по фото.">
 <meta name="keywords" content="заказать картину, контакты художника, форма заявки">
-<link rel="canonical" href="https://artist-portfolio.netlify.app/contacts.html">
+<link rel="canonical" href="https://banan41k78.github.io/artist-portfolio/contacts.html">
 <meta property="og:title" content="Контакты — заказать картину">
 <meta property="og:description" content="Форма заявки, email, телефон, соцсети.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://artist-portfolio.netlify.app/contacts.html">
+<meta property="og:url" content="https://banan41k78.github.io/artist-portfolio/contacts.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
-<link rel="canonical" href="https://banan41k78.github.io/artist-portfolio/contacts.html">
 </head>
 <body>
 
 <header>
     <div class="logo">ХУДОЖНИК</div>
+    <button class="burger-menu" id="burgerBtn" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     <nav>
-        <ul>
+        <ul id="navMenu">
             <li><a href="index.html">Главная</a></li>
             <li><a href="gallery.html">Галерея</a></li>
             <li><a href="services.html">Услуги</a></li>
+            <li><a href="delivery.html">Доставка</a></li>
             <li><a href="about.html">О художнике</a></li>
             <li><a href="contacts.html" class="active">Контакты</a></li>
         </ul>
@@ -64,6 +69,12 @@
             <label for="msg">Описание</label>
             <textarea id="msg" name="msg" placeholder="Опишите идею, размер, сроки..."></textarea>
         </div>
+        <div class="form-group form-consent">
+            <label>
+                <input type="checkbox" required>
+                Я согласен с <a href="privacy.html">политикой конфиденциальности</a>
+            </label>
+        </div>
         <button type="submit" class="btn">Отправить заявку</button>
     </form>
 
@@ -73,12 +84,28 @@
         <li><strong>Телефон:</strong> +7 (900) 000-00-00</li>
         <li><strong>Соцсети:</strong> VK, Telegram</li>
         <li><strong>Город:</strong> Тула</li>
+        <li><strong>Режим работы:</strong> пн–пт, 10:00–19:00 (МСК)</li>
     </ul>
+
+    <div class="requisites">
+        <h3>Реквизиты</h3>
+        <p><strong>ИП Александров А. В.</strong></p>
+        <p>ИНН: 710000000000</p>
+        <p>Город: Тула</p>
+        <p>Email: artist@example.com</p>
+    </div>
+
+    <h2>Доставка и оплата</h2>
+    <p>Условия доставки и оплаты описаны на отдельной странице.</p>
+    <p><a href="delivery.html" class="btn-outline btn">Доставка и оплата</a></p>
 </div>
 
 <footer>
     <p>Портфолио художника, 2026. <a href="contacts.html">Связаться</a></p>
+    <p class="requisites-mini">ИП Александров А. В. • ИНН 710000000000 • Тула</p>
+    <p><a href="privacy.html">Политика конфиденциальности</a> • <a href="delivery.html">Доставка и оплата</a> • <a href="contacts.html">Контакты</a></p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

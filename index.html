@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru" prefix="og: https://ogp.me/ns#">
 <head>
-<meta name="yandex-verification" content="2a2ae660c275b1a1" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Портфолио художника — картины маслом, портреты на заказ</title>
 <meta name="description" content="Галерея работ художника: пейзажи, портреты, натюрморты. Картины на заказ и портрет по фото. Открытые цены, доставка, гарантии.">
 <meta name="keywords" content="портфолио художника, галерея картин, картины маслом, портрет на заказ, картина по фото">
 <meta name="author" content="Александр">
-<link rel="canonical" href="https://artist-portfolio.netlify.app/index.html">
+<link rel="canonical" href="https://banan41k78.github.io/artist-portfolio/">
 <meta property="og:title" content="Портфолио художника — картины на заказ">
 <meta property="og:description" content="Галерея работ: пейзажи, портреты, натюрморты. Картины на заказ и портрет по фото.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://artist-portfolio.netlify.app/">
+<meta property="og:url" content="https://banan41k78.github.io/artist-portfolio/">
 <meta property="og:locale" content="ru_RU">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
-<link rel="canonical" href="https://banan41k78.github.io/artist-portfolio/">
 </head>
 <body>
 
 <header>
-    <div class="logo">ХУДОЖНИК</div>
+    <a href="about.html" class="logo">ХУДОЖНИК</a>
+    
+    <button class="burger-menu" id="burgerBtn" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
     <nav>
-        <ul>
+        <ul id="navMenu">
             <li><a href="index.html" class="active">Главная</a></li>
             <li><a href="gallery.html">Галерея</a></li>
             <li><a href="services.html">Услуги</a></li>
+            <li><a href="delivery.html">Доставка</a></li>
             <li><a href="about.html">О художнике</a></li>
             <li><a href="contacts.html">Контакты</a></li>
         </ul>
@@ -96,6 +102,36 @@
 </div>
 
 <div class="container">
+    <h2>Как заказать</h2>
+    <ol class="steps">
+        <li><strong>Заявка.</strong> Оставьте заявку через форму на странице «Контакты» или напишите на почту.</li>
+        <li><strong>Согласование.</strong> Обсуждаем идею, размер, технику, сроки и стоимость.</li>
+        <li><strong>Эскиз и предоплата 50%.</strong> Утверждаем эскиз, вносится предоплата 50%.</li>
+        <li><strong>Работа над картиной.</strong> Пишу картину, присылаю промежуточные фото.</li>
+        <li><strong>Передача и оплата.</strong> Финальная оплата, отправка или самовывоз.</li>
+    </ol>
+    <p><a href="services.html" class="btn" style="margin-top:1rem;">Подробнее об услугах</a></p>
+</div>
+
+<div class="container">
+    <h2>Отзывы клиентов</h2>
+    <div class="reviews-grid">
+        <div class="review-card">
+            <div class="author">Анна К.</div>
+            <div class="text">«Заказывала портрет мамы. Получилось очень живо и тепло. Спасибо!»</div>
+        </div>
+        <div class="review-card">
+            <div class="author">Дмитрий С.</div>
+            <div class="text">«Картина маслом по фото — просто восторг. Все детали переданы точно.»</div>
+        </div>
+        <div class="review-card">
+            <div class="author">Елена В.</div>
+            <div class="text">«Пейзаж получился именно таким, как я представляла. Работа выполнена в срок.»</div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
     <h2>О художнике</h2>
     <p>Меня зовут Александр. Работаю в жанрах пейзаж, портрет, натюрморт. Пишу маслом и акварелью более 10 лет. Каждая работа — это история, рассказанная цветом и светом.</p>
     <a href="about.html" class="btn-outline btn">Подробнее</a>
@@ -103,7 +139,10 @@
 
 <footer>
     <p>Портфолио художника, 2026. <a href="contacts.html">Связаться</a></p>
+    <p class="requisites-mini">ИП Александров А. В. • ИНН 710000000000 • Тула</p>
+    <p><a href="privacy.html">Политика конфиденциальности</a> • <a href="delivery.html">Доставка и оплата</a> • <a href="contacts.html">Контакты</a></p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

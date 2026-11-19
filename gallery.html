@@ -6,24 +6,29 @@
 <title>Галерея работ — живопись маслом, акварель, графика</title>
 <meta name="description" content="Галерея картин художника: работы маслом, акварелью, графика, абстракция. Пейзажи, портреты, натюрморты с описанием и ценой.">
 <meta name="keywords" content="галерея картин, картины маслом, акварель, графика, пейзаж, портрет, натюрморт">
-<link rel="canonical" href="https://artist-portfolio.netlify.app/gallery.html">
+<link rel="canonical" href="https://banan41k78.github.io/artist-portfolio/gallery.html">
 <meta property="og:title" content="Галерея работ художника">
 <meta property="og:description" content="Живопись маслом, акварель, графика. Пейзажи, портреты, натюрморты.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://artist-portfolio.netlify.app/gallery.html">
+<meta property="og:url" content="https://banan41k78.github.io/artist-portfolio/gallery.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
-<link rel="canonical" href="https://banan41k78.github.io/artist-portfolio/gallery.html">
 </head>
 <body>
 
 <header>
-    <div class="logo">ХУДОЖНИК</div>
+    <a href="about.html" class="logo">ХУДОЖНИК</a>
+    <button class="burger-menu" id="burgerBtn" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     <nav>
-        <ul>
+        <ul id="navMenu">
             <li><a href="index.html">Главная</a></li>
             <li><a href="gallery.html" class="active">Галерея</a></li>
             <li><a href="services.html">Услуги</a></li>
+            <li><a href="delivery.html">Доставка</a></li>
             <li><a href="about.html">О художнике</a></li>
             <li><a href="contacts.html">Контакты</a></li>
         </ul>
@@ -147,9 +152,13 @@
 
 <footer>
     <p>Портфолио художника, 2026. <a href="contacts.html">Связаться</a></p>
+    <p class="requisites-mini">ИП Александров А. В. • ИНН 710000000000 • Тула</p>
+    <p><a href="privacy.html">Политика конфиденциальности</a> • <a href="delivery.html">Доставка и оплата</a> • <a href="contacts.html">Контакты</a></p>
 </footer>
 
+<script src="script.js"></script>
 <script>
+    // Дополнительный скрипт для галереи
     const filterButtons = document.querySelectorAll('.filters button');
     const cards = document.querySelectorAll('#grid .card');
 
@@ -196,6 +205,5 @@
     overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 </script>
-
 </body>
 </html>
