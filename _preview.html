@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile preview</title>
+<style>
+    html, body { margin: 0; padding: 0; background: #777; }
+    iframe { display: block; width: 390px; height: 844px; border: 0; }
+</style>
+</head>
+<body>
+<iframe id="frame" src="index.html"></iframe>
+<script>
+    const params = new URLSearchParams(location.search);
+    const frame = document.getElementById('frame');
+    const page = params.get('page');
+    const action = params.get('action');
+    const width = params.get('w');
+    const height = params.get('h');
+    if (width) frame.style.width = width + 'px';
+    if (height) frame.style.height = height + 'px';
+    if (page) frame.src = page;
+    frame.addEventListener('load', () => {
+        try {
+            if (action === 'modal') frame.contentDocument.querySelector('#grid .card').click();
+            if (action === 'menu') frame.contentDocument.getElementById('burgerBtn').click();
+            if (action === 'filter') frame.contentDocument.querySelector('[data-filter="oil"]').click();
+            if (action === 'form') {
+                const doc = frame.contentDocument;
+                doc.getElementById('name').value = 'Иван';
+                doc.getElementById('contact').value = 'ivan@mail.ru';
+                doc.getElementById('consent').checked = true;
+                doc.querySelector('#contactForm button[type="submit"]').click();
+            }
+        } catch (error) {
+            document.title = 'Action error: ' + error.message;
+        }
+    });
+</script>
+</body>
+</html>

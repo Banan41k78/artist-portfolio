@@ -18,23 +18,24 @@
 
 <header>
     <a href="index.html" class="logo">ХУДОЖНИК</a>
-    <button class="burger-menu" id="burgerBtn" aria-label="Открыть меню">
+    <button class="burger-menu" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false" aria-controls="navMenu">
         <span></span>
         <span></span>
         <span></span>
     </button>
-    <nav>
+    <nav aria-label="Основная навигация">
         <ul id="navMenu">
             <li><a href="index.html">Главная</a></li>
             <li><a href="gallery.html">Галерея</a></li>
             <li><a href="services.html">Услуги</a></li>
             <li><a href="delivery.html">Доставка</a></li>
-            <li><a href="about.html" class="active">О художнике</a></li>
+            <li><a href="about.html" class="active" aria-current="page">О художнике</a></li>
             <li><a href="contacts.html">Контакты</a></li>
         </ul>
     </nav>
 </header>
 
+<main id="main">
 <div class="container">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
         <a href="index.html">Главная</a> / <span>О художнике</span>
@@ -61,7 +62,7 @@
 
     <h2>Мастерская</h2>
     <p>Работаю в мастерской в Туле. При необходимости возможен выезд на пленэр или мероприятие.</p>
-    <div class="photo-example" style="grid-template-columns: 1fr 1fr;">
+    <div class="photo-example two-col">
         <div class="photo-example-item">
             <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><rect fill='%23dddddd' width='400' height='300'/><text x='50%25' y='50%25' font-family='Arial' font-size='18' fill='%23666' text-anchor='middle' dominant-baseline='middle'>ФОТО МАСТЕРСКОЙ</text></svg>" alt="Мастерская художника">
         </div>
@@ -86,11 +87,12 @@
         </div>
     </div>
 
-    <p style="margin-top:1.5rem;"><a href="contacts.html" class="btn">Связаться с художником</a></p>
+    <p class="section-cta"><a href="contacts.html" class="btn">Связаться с художником</a></p>
 </div>
+</main>
 
 <footer>
-    <p>Портфолио художника, 2026. <a href="contacts.html">Связаться</a></p>
+    <p>Портфолио художника, <span data-year>2026</span>. <a href="contacts.html">Связаться</a></p>
     <p class="requisites-mini">ИП Александров А. В. • ИНН 710000000000 • Тула</p>
     <p><a href="privacy.html">Политика конфиденциальности</a> • <a href="delivery.html">Доставка и оплата</a> • <a href="contacts.html">Контакты</a></p>
 </footer>

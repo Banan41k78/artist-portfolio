@@ -17,16 +17,16 @@
 <body>
 
 <header>
-    <a href="about.html" class="logo">ХУДОЖНИК</a>
-    <button class="burger-menu" id="burgerBtn" aria-label="Открыть меню">
+    <a href="index.html" class="logo">ХУДОЖНИК</a>
+    <button class="burger-menu" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false" aria-controls="navMenu">
         <span></span>
         <span></span>
         <span></span>
     </button>
-    <nav>
+    <nav aria-label="Основная навигация">
         <ul id="navMenu">
             <li><a href="index.html">Главная</a></li>
-            <li><a href="gallery.html" class="active">Галерея</a></li>
+            <li><a href="gallery.html" class="active" aria-current="page">Галерея</a></li>
             <li><a href="services.html">Услуги</a></li>
             <li><a href="delivery.html">Доставка</a></li>
             <li><a href="about.html">О художнике</a></li>
@@ -35,6 +35,7 @@
     </nav>
 </header>
 
+<main id="main">
 <div class="container">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
         <a href="index.html">Главная</a> / <span>Галерея</span>
@@ -43,16 +44,18 @@
     <h1>Галерея работ</h1>
     <p>Все работы выполнены вручную. Нажмите на карточку, чтобы посмотреть подробнее.</p>
 
-    <div class="filters">
-        <button class="active" data-filter="all">Все</button>
-        <button data-filter="oil">Масло</button>
-        <button data-filter="watercolor">Акварель</button>
-        <button data-filter="graphics">Графика</button>
-        <button data-filter="abstract">Абстракция</button>
-        <button data-filter="landscape">Пейзаж</button>
-        <button data-filter="portrait">Портрет</button>
-        <button data-filter="still">Натюрморт</button>
+    <div class="filters" role="group" aria-label="Фильтры работ">
+        <button type="button" class="active" data-filter="all" aria-pressed="true">Все</button>
+        <button type="button" data-filter="oil" aria-pressed="false">Масло</button>
+        <button type="button" data-filter="watercolor" aria-pressed="false">Акварель</button>
+        <button type="button" data-filter="graphics" aria-pressed="false">Графика</button>
+        <button type="button" data-filter="abstract" aria-pressed="false">Абстракция</button>
+        <button type="button" data-filter="landscape" aria-pressed="false">Пейзаж</button>
+        <button type="button" data-filter="portrait" aria-pressed="false">Портрет</button>
+        <button type="button" data-filter="still" aria-pressed="false">Натюрморт</button>
     </div>
+
+    <p class="gallery-status" id="galleryStatus" role="status">Показано: 6 работ</p>
 
     <div class="grid" id="grid">
 
@@ -64,7 +67,7 @@
              data-img="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23c9a961'/><stop offset='1' stop-color='%238b6f3a'/></linearGradient></defs><rect fill='url(%23g)' width='600' height='400'/><text x='50%25' y='50%25' font-family='Arial' font-size='32' fill='white' text-anchor='middle' dominant-baseline='middle'>ПЕЙЗАЖ</text></svg>">
             <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23c9a961'/><stop offset='1' stop-color='%238b6f3a'/></linearGradient></defs><rect fill='url(%23g)' width='400' height='300'/><text x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'>ПЕЙЗАЖ</text></svg>" alt="Картина маслом «Закат над Волгой», пейзаж, 60x80 см, 2024 год">
             <div class="info">
-                <h3 itemprop="name">Закат над Волгой</h3>
+                <h2 itemprop="name">Закат над Волгой</h2>
                 <p>Масло, 60x80, 2024</p>
             </div>
         </div>
@@ -77,7 +80,7 @@
              data-img="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%234a6fa5'/><stop offset='1' stop-color='%232c3e50'/></linearGradient></defs><rect fill='url(%23g)' width='600' height='400'/><text x='50%25' y='50%25' font-family='Arial' font-size='32' fill='white' text-anchor='middle' dominant-baseline='middle'>ПОРТРЕТ</text></svg>">
             <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%234a6fa5'/><stop offset='1' stop-color='%232c3e50'/></linearGradient></defs><rect fill='url(%23g)' width='400' height='300'/><text x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'>ПОРТРЕТ</text></svg>" alt="Портрет маслом «Портрет Анны», 50x70 см, 2024 год">
             <div class="info">
-                <h3 itemprop="name">Портрет Анны</h3>
+                <h2 itemprop="name">Портрет Анны</h2>
                 <p>Масло, 50x70, 2024</p>
             </div>
         </div>
@@ -90,7 +93,7 @@
              data-img="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%236b8e23'/><stop offset='1' stop-color='%233d5014'/></linearGradient></defs><rect fill='url(%23g)' width='600' height='400'/><text x='50%25' y='50%25' font-family='Arial' font-size='32' fill='white' text-anchor='middle' dominant-baseline='middle'>НАТЮРМОРТ</text></svg>">
             <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%236b8e23'/><stop offset='1' stop-color='%233d5014'/></linearGradient></defs><rect fill='url(%23g)' width='400' height='300'/><text x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'>НАТЮРМОРТ</text></svg>" alt="Акварельный натюрморт «Утренний свет», 40x50 см, 2023 год">
             <div class="info">
-                <h3 itemprop="name">Утренний свет</h3>
+                <h2 itemprop="name">Утренний свет</h2>
                 <p>Акварель, 40x50, 2023</p>
             </div>
         </div>
@@ -103,7 +106,7 @@
              data-img="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23e67e22'/><stop offset='1' stop-color='%23c0392b'/></linearGradient></defs><rect fill='url(%23g)' width='600' height='400'/><text x='50%25' y='50%25' font-family='Arial' font-size='32' fill='white' text-anchor='middle' dominant-baseline='middle'>АБСТРАКЦИЯ</text></svg>">
             <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23e67e22'/><stop offset='1' stop-color='%23c0392b'/></linearGradient></defs><rect fill='url(%23g)' width='400' height='300'/><text x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'>АБСТРАКЦИЯ</text></svg>" alt="Абстрактная картина акрилом «Форма и цвет», 70x70 см, 2023 год">
             <div class="info">
-                <h3 itemprop="name">Форма и цвет</h3>
+                <h2 itemprop="name">Форма и цвет</h2>
                 <p>Акрил, 70x70, 2023</p>
             </div>
         </div>
@@ -116,7 +119,7 @@
              data-img="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect fill='%23333' width='600' height='400'/><text x='50%25' y='50%25' font-family='Arial' font-size='32' fill='white' text-anchor='middle' dominant-baseline='middle'>ГРАФИКА</text></svg>">
             <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><rect fill='%23333' width='400' height='300'/><text x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'>ГРАФИКА</text></svg>" alt="Графический портрет карандашом «Набросок», 30x40 см, 2022 год">
             <div class="info">
-                <h3 itemprop="name">Набросок</h3>
+                <h2 itemprop="name">Набросок</h2>
                 <p>Графика, 30x40, 2022</p>
             </div>
         </div>
@@ -129,17 +132,20 @@
              data-img="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%2395a5a6'/><stop offset='1' stop-color='%232c3e50'/></linearGradient></defs><rect fill='url(%23g)' width='600' height='400'/><text x='50%25' y='50%25' font-family='Arial' font-size='32' fill='white' text-anchor='middle' dominant-baseline='middle'>ЗИМА</text></svg>">
             <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%2395a5a6'/><stop offset='1' stop-color='%232c3e50'/></linearGradient></defs><rect fill='url(%23g)' width='400' height='300'/><text x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'>ЗИМА</text></svg>" alt="Картина маслом «Зимний лес», пейзаж, 50x70 см, 2023 год">
             <div class="info">
-                <h3 itemprop="name">Зимний лес</h3>
+                <h2 itemprop="name">Зимний лес</h2>
                 <p>Масло, 50x70, 2023</p>
             </div>
         </div>
 
     </div>
-</div>
 
-<div class="modal-overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <p class="gallery-empty" id="galleryEmpty" hidden>В этой категории пока нет работ. Попробуйте другой фильтр.</p>
+</div>
+</main>
+
+<div class="modal-overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="mTitle" aria-hidden="true">
     <div class="modal">
-        <button class="modal-close" id="close" aria-label="Закрыть">&times;</button>
+        <button class="modal-close" id="close" type="button" aria-label="Закрыть">&times;</button>
         <img id="mImage" src="" alt="">
         <div class="modal-info">
             <h2 id="mTitle"></h2>
@@ -151,59 +157,11 @@
 </div>
 
 <footer>
-    <p>Портфолио художника, 2026. <a href="contacts.html">Связаться</a></p>
+    <p>Портфолио художника, <span data-year>2026</span>. <a href="contacts.html">Связаться</a></p>
     <p class="requisites-mini">ИП Александров А. В. • ИНН 710000000000 • Тула</p>
     <p><a href="privacy.html">Политика конфиденциальности</a> • <a href="delivery.html">Доставка и оплата</a> • <a href="contacts.html">Контакты</a></p>
 </footer>
 
 <script src="script.js"></script>
-<script>
-    // Дополнительный скрипт для галереи
-    const filterButtons = document.querySelectorAll('.filters button');
-    const cards = document.querySelectorAll('#grid .card');
-
-    filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filterButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const filter = btn.dataset.filter;
-            cards.forEach(card => {
-                if (filter === 'all' || card.dataset.cat.includes(filter)) {
-                    card.style.display = '';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    });
-
-    const overlay = document.getElementById('overlay');
-    const closeBtn = document.getElementById('close');
-    const mTitle = document.getElementById('mTitle');
-    const mMeta = document.getElementById('mMeta');
-    const mDesc = document.getElementById('mDesc');
-    const mImage = document.getElementById('mImage');
-
-    cards.forEach(card => {
-        card.addEventListener('click', () => {
-            mTitle.textContent = card.dataset.title;
-            mMeta.textContent = card.dataset.meta;
-            mDesc.textContent = card.dataset.desc;
-            mImage.src = card.dataset.img;
-            mImage.alt = 'Картина «' + card.dataset.title + '», ' + card.dataset.meta;
-            overlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-    });
-
-    function closeModal() {
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    closeBtn.addEventListener('click', closeModal);
-    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-</script>
 </body>
 </html>

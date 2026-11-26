@@ -17,24 +17,25 @@
 <body>
 
 <header>
-    <div class="logo">ХУДОЖНИК</div>
-    <button class="burger-menu" id="burgerBtn" aria-label="Открыть меню">
+    <a href="index.html" class="logo">ХУДОЖНИК</a>
+    <button class="burger-menu" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false" aria-controls="navMenu">
         <span></span>
         <span></span>
         <span></span>
     </button>
-    <nav>
+    <nav aria-label="Основная навигация">
         <ul id="navMenu">
             <li><a href="index.html">Главная</a></li>
             <li><a href="gallery.html">Галерея</a></li>
             <li><a href="services.html">Услуги</a></li>
             <li><a href="delivery.html">Доставка</a></li>
             <li><a href="about.html">О художнике</a></li>
-            <li><a href="contacts.html" class="active">Контакты</a></li>
+            <li><a href="contacts.html" class="active" aria-current="page">Контакты</a></li>
         </ul>
     </nav>
 </header>
 
+<main id="main">
 <div class="container">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
         <a href="index.html">Главная</a> / <span>Контакты</span>
@@ -43,14 +44,14 @@
     <h1>Контакты</h1>
     <p>Оставьте заявку — отвечу в течение дня. Опишите идею, укажите бюджет и сроки.</p>
 
-    <form onsubmit="event.preventDefault(); alert('Спасибо! Заявка отправлена.'); this.reset();">
+    <form id="contactForm" class="contact-form" action="#" method="post">
         <div class="form-group">
             <label for="name">Ваше имя</label>
-            <input type="text" id="name" name="name" required placeholder="Иван">
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Иван">
         </div>
         <div class="form-group">
             <label for="contact">Email или телефон</label>
-            <input type="text" id="contact" name="contact" required placeholder="example@mail.ru">
+            <input type="text" id="contact" name="contact" required autocomplete="email" placeholder="example@mail.ru">
         </div>
         <div class="form-group">
             <label for="type">Что нужно нарисовать</label>
@@ -70,18 +71,26 @@
             <textarea id="msg" name="msg" placeholder="Опишите идею, размер, сроки..."></textarea>
         </div>
         <div class="form-group form-consent">
-            <label>
-                <input type="checkbox" required>
-                Я согласен с <a href="privacy.html">политикой конфиденциальности</a>
+            <label for="consent">
+                <input type="checkbox" id="consent" name="consent" required>
+                <span>Согласен с обработкой персональных данных</span>
             </label>
+            <a class="form-consent-link" href="privacy.html">Политика конфиденциальности</a>
         </div>
         <button type="submit" class="btn">Отправить заявку</button>
+        <div class="form-success" id="formSuccess" role="status" hidden>
+            <span class="form-success-icon" aria-hidden="true">✓</span>
+            <div>
+                <strong>Спасибо! Заявка отправлена.</strong><br>
+                Свяжусь с вами в течение дня.
+            </div>
+        </div>
     </form>
 
     <h2>Другие способы связи</h2>
     <ul class="list">
-        <li><strong>Email:</strong> artist@example.com</li>
-        <li><strong>Телефон:</strong> +7 (900) 000-00-00</li>
+        <li><strong>Email:</strong> <a href="mailto:artist@example.com">artist@example.com</a></li>
+        <li><strong>Телефон:</strong> <a href="tel:+79000000000">+7 (900) 000-00-00</a></li>
         <li><strong>Соцсети:</strong> VK, Telegram</li>
         <li><strong>Город:</strong> Тула</li>
         <li><strong>Режим работы:</strong> пн–пт, 10:00–19:00 (МСК)</li>
@@ -97,11 +106,12 @@
 
     <h2>Доставка и оплата</h2>
     <p>Условия доставки и оплаты описаны на отдельной странице.</p>
-    <p><a href="delivery.html" class="btn-outline btn">Доставка и оплата</a></p>
+    <p class="section-cta"><a href="delivery.html" class="btn btn-outline">Доставка и оплата</a></p>
 </div>
+</main>
 
 <footer>
-    <p>Портфолио художника, 2026. <a href="contacts.html">Связаться</a></p>
+    <p>Портфолио художника, <span data-year>2026</span>. <a href="contacts.html">Связаться</a></p>
     <p class="requisites-mini">ИП Александров А. В. • ИНН 710000000000 • Тула</p>
     <p><a href="privacy.html">Политика конфиденциальности</a> • <a href="delivery.html">Доставка и оплата</a> • <a href="contacts.html">Контакты</a></p>
 </footer>

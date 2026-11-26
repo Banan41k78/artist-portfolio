@@ -16,13 +16,13 @@
 <body>
 
 <header>
-    <a href="about.html" class="logo">ХУДОЖНИК</a>
-    <button class="burger-menu" id="burgerBtn" aria-label="Открыть меню">
+    <a href="index.html" class="logo">ХУДОЖНИК</a>
+    <button class="burger-menu" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false" aria-controls="navMenu">
         <span></span>
         <span></span>
         <span></span>
     </button>
-    <nav>
+    <nav aria-label="Основная навигация">
         <ul id="navMenu">
             <li><a href="index.html">Главная</a></li>
             <li><a href="gallery.html">Галерея</a></li>
@@ -34,6 +34,7 @@
     </nav>
 </header>
 
+<main id="main">
 <div class="container">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
         <a href="index.html">Главная</a> / <span>Политика конфиденциальности</span>
@@ -78,9 +79,10 @@
 
     <p>Дата публикации: 19 октября 2026 г.</p>
 </div>
+</main>
 
 <footer>
-    <p>Портфолио художника, 2026. <a href="contacts.html">Связаться</a></p>
+    <p>Портфолио художника, <span data-year>2026</span>. <a href="contacts.html">Связаться</a></p>
     <p class="requisites-mini">ИП Александров А. В. • ИНН 710000000000 • Тула</p>
     <p><a href="privacy.html">Политика конфиденциальности</a> • <a href="delivery.html">Доставка и оплата</a> • <a href="contacts.html">Контакты</a></p>
 </footer>
